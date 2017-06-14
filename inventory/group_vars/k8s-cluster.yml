@@ -94,7 +94,7 @@ kube_apiserver_insecure_port: 8080 # (http)
 
 # DNS configuration.
 # Kubernetes cluster name, also will be used as DNS domain
-cluster_name: cluster.local
+cluster_name: k8s.local
 # Subdomains of DNS domain to be resolved via /etc/resolv.conf for hostnet pods
 ndots: 2
 # Can be dnsmasq_kubedns, kubedns or none
@@ -128,7 +128,7 @@ vault_deployment_type: docker
 k8s_image_pull_policy: IfNotPresent
 
 # Monitoring apps for k8s
-efk_enabled: false
+efk_enabled: true 
 
 # Helm deployment
-helm_enabled: false
+helm_enabled: true
