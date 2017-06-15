@@ -53,7 +53,7 @@
 - name: check number of nameservers
   fail:
     msg: "Too many nameservers"
-  when: docker_dns_servers|length > 3
+  when: docker_dns_servers|length > 4
 
 - name: check number of search domains
   fail:

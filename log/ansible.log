@@ -1,0 +1,2205 @@
+2017-06-15 07:42:41,594 p=14919 u=centos |  PLAY [k8s-cluster:etcd:calico-rr] *******************************************************************************************************************************************************************************************
+2017-06-15 07:42:41,698 p=14919 u=centos |  TASK [docker : gather os specific variables] ********************************************************************************************************************************************************************************
+2017-06-15 07:42:41,699 p=14919 u=centos |  Thursday 15 June 2017  07:42:41 +0000 (0:00:00.193)       0:00:00.193 ********* 
+2017-06-15 07:42:41,776 p=14919 u=centos |  ok: [node2] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:42:41,780 p=14919 u=centos |  ok: [node3] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:42:41,805 p=14919 u=centos |  ok: [node4] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:42:41,809 p=14919 u=centos |  ok: [node1] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:42:41,824 p=14919 u=centos |  TASK [docker : set dns server for docker] ***********************************************************************************************************************************************************************************
+2017-06-15 07:42:41,825 p=14919 u=centos |  Thursday 15 June 2017  07:42:41 +0000 (0:00:00.126)       0:00:00.320 ********* 
+2017-06-15 07:42:41,881 p=14919 u=centos |  fatal: [node3]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:42:41,884 p=14919 u=centos |  fatal: [node2]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:42:41,893 p=14919 u=centos |  fatal: [node4]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:42:41,905 p=14919 u=centos |  fatal: [node1]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:42:41,909 p=14919 u=centos |  	to retry, use: --limit @/home/centos/kargo/docker.retry
+
+2017-06-15 07:42:41,909 p=14919 u=centos |  PLAY RECAP ******************************************************************************************************************************************************************************************************************
+2017-06-15 07:42:41,910 p=14919 u=centos |  node1                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:42:41,910 p=14919 u=centos |  node2                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:42:41,911 p=14919 u=centos |  node3                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:42:41,911 p=14919 u=centos |  node4                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:42:41,911 p=14919 u=centos |  Thursday 15 June 2017  07:42:41 +0000 (0:00:00.086)       0:00:00.406 ********* 
+2017-06-15 07:42:41,911 p=14919 u=centos |  =============================================================================== 
+2017-06-15 07:42:41,912 p=14919 u=centos |  docker : gather os specific variables ----------------------------------- 0.13s
+2017-06-15 07:42:41,912 p=14919 u=centos |  docker : set dns server for docker -------------------------------------- 0.09s
+2017-06-15 07:43:13,099 p=15308 u=centos |  PLAY [k8s-cluster:etcd:calico-rr] *******************************************************************************************************************************************************************************************
+2017-06-15 07:43:13,204 p=15308 u=centos |  TASK [docker : gather os specific variables] ********************************************************************************************************************************************************************************
+2017-06-15 07:43:13,205 p=15308 u=centos |  Thursday 15 June 2017  07:43:13 +0000 (0:00:00.198)       0:00:00.198 ********* 
+2017-06-15 07:43:13,288 p=15308 u=centos |  ok: [node2] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:43:13,291 p=15308 u=centos |  ok: [node3] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:43:13,306 p=15308 u=centos |  ok: [node4] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:43:13,329 p=15308 u=centos |  ok: [node1] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 07:43:13,343 p=15308 u=centos |  TASK [docker : set dns server for docker] ***********************************************************************************************************************************************************************************
+2017-06-15 07:43:13,344 p=15308 u=centos |  Thursday 15 June 2017  07:43:13 +0000 (0:00:00.138)       0:00:00.337 ********* 
+2017-06-15 07:43:13,385 p=15308 u=centos |  fatal: [node2]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:43:13,388 p=15308 u=centos |  fatal: [node3]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:43:13,413 p=15308 u=centos |  fatal: [node4]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:43:13,416 p=15308 u=centos |  fatal: [node1]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 07:43:13,421 p=15308 u=centos |  	to retry, use: --limit @/home/centos/kargo/docker.retry
+
+2017-06-15 07:43:13,422 p=15308 u=centos |  PLAY RECAP ******************************************************************************************************************************************************************************************************************
+2017-06-15 07:43:13,422 p=15308 u=centos |  node1                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:43:13,423 p=15308 u=centos |  node2                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:43:13,423 p=15308 u=centos |  node3                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:43:13,424 p=15308 u=centos |  node4                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 07:43:13,424 p=15308 u=centos |  Thursday 15 June 2017  07:43:13 +0000 (0:00:00.080)       0:00:00.418 ********* 
+2017-06-15 07:43:13,425 p=15308 u=centos |  =============================================================================== 
+2017-06-15 07:43:13,425 p=15308 u=centos |  docker : gather os specific variables ----------------------------------- 0.14s
+2017-06-15 07:43:13,426 p=15308 u=centos |  docker : set dns server for docker -------------------------------------- 0.08s
+2017-06-15 08:05:56,144 p=21428 u=centos |  ERROR! Missing target hosts
+2017-06-15 08:06:01,737 p=21470 u=centos |  node4 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.88.58.149\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:06:01,769 p=21470 u=centos |  node3 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.88.58.147\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:06:01,889 p=21470 u=centos |  node2 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.88.58.148\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:06:02,116 p=21470 u=centos |  node1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.88.58.146\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:35:21,991 p=28936 u=centos |  temp1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.184.53.140\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:36:45,152 p=29324 u=centos |  temp1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.184.53.140\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:36:48,836 p=29372 u=centos |  temp1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.184.53.140\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:38:36,594 p=30019 u=centos |   __________________
+< PLAY [localhost] >
+ ------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:36,749 p=30019 u=centos |   ____________________________________________
+< TASK [kargo-defaults : Configure defaults] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:36,750 p=30019 u=centos |  Thursday 15 June 2017  08:38:36 +0000 (0:00:00.252)       0:00:00.252 ********* 
+2017-06-15 08:38:36,796 p=30019 u=centos |  ok: [localhost] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:38:36,868 p=30019 u=centos |   ______________________________________
+< TASK [bastion-ssh-config : set_fact] >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:36,869 p=30019 u=centos |  Thursday 15 June 2017  08:38:36 +0000 (0:00:00.118)       0:00:00.371 ********* 
+2017-06-15 08:38:36,975 p=30019 u=centos |  ok: [localhost]
+2017-06-15 08:38:37,044 p=30019 u=centos |   ______________________________________
+< TASK [bastion-ssh-config : set_fact] >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:37,045 p=30019 u=centos |  Thursday 15 June 2017  08:38:37 +0000 (0:00:00.175)       0:00:00.547 ********* 
+2017-06-15 08:38:37,140 p=30019 u=centos |   ______________________________________
+< TASK [bastion-ssh-config : set_fact] >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:37,141 p=30019 u=centos |  Thursday 15 June 2017  08:38:37 +0000 (0:00:00.096)       0:00:00.644 ********* 
+2017-06-15 08:38:37,241 p=30019 u=centos |   _____________________________________________________
+< TASK [bastion-ssh-config : create ssh bastion conf] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:37,242 p=30019 u=centos |  Thursday 15 June 2017  08:38:37 +0000 (0:00:00.100)       0:00:00.744 ********* 
+2017-06-15 08:38:38,227 p=30019 u=centos |  ok: [localhost]
+2017-06-15 08:38:38,353 p=30019 u=centos |   _____________
+< PLAY [temp] >
+ -------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,453 p=30019 u=centos |   ____________________________________________
+< TASK [kargo-defaults : Configure defaults] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,454 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:01.211)       0:00:01.956 ********* 
+2017-06-15 08:38:38,495 p=30019 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:38:38,561 p=30019 u=centos |   ________________________________________________________
+/ TASK [bootstrap-os : Bootstrap | Check if bootstrap is \
+\ needed]                                                /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,563 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:00.108)       0:00:02.065 ********* 
+2017-06-15 08:38:38,696 p=30019 u=centos |   _________________________________________________________
+/ TASK [bootstrap-os : Bootstrap | Install python 2.x and \
+\ pip]                                                    /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,697 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:00.134)       0:00:02.199 ********* 
+2017-06-15 08:38:38,799 p=30019 u=centos |   ________________________________
+< TASK [bootstrap-os : set_fact] >
+ --------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,801 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:00.103)       0:00:02.303 ********* 
+2017-06-15 08:38:38,896 p=30019 u=centos |   ________________________________________________________
+/ TASK [bootstrap-os : Bootstrap | Check if bootstrap is \
+\ needed]                                                /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,897 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:00.096)       0:00:02.399 ********* 
+2017-06-15 08:38:38,993 p=30019 u=centos |   ____________________________________________________
+< TASK [bootstrap-os : Bootstrap | Run bootstrap.sh] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:38,993 p=30019 u=centos |  Thursday 15 June 2017  08:38:38 +0000 (0:00:00.096)       0:00:02.496 ********* 
+2017-06-15 08:38:39,093 p=30019 u=centos |   ________________________________
+< TASK [bootstrap-os : set_fact] >
+ --------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,095 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.101)       0:00:02.597 ********* 
+2017-06-15 08:38:39,194 p=30019 u=centos |   ______________________________________________________
+/ TASK [bootstrap-os : Bootstrap | Check if we need to \
+\ install pip]                                         /
+ ------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,195 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.099)       0:00:02.697 ********* 
+2017-06-15 08:38:39,291 p=30019 u=centos |   ___________________________________________________
+< TASK [bootstrap-os : Bootstrap | Copy get-pip.py] >
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,292 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.096)       0:00:02.794 ********* 
+2017-06-15 08:38:39,387 p=30019 u=centos |   _______________________________________________
+< TASK [bootstrap-os : Bootstrap | Install pip] >
+ -----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,388 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.095)       0:00:02.890 ********* 
+2017-06-15 08:38:39,482 p=30019 u=centos |   _____________________________________________________
+< TASK [bootstrap-os : Bootstrap | Remove get-pip.py] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,483 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.095)       0:00:02.985 ********* 
+2017-06-15 08:38:39,580 p=30019 u=centos |   ________________________________________________________
+< TASK [bootstrap-os : Bootstrap | Install pip launcher] >
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,581 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.097)       0:00:03.083 ********* 
+2017-06-15 08:38:39,681 p=30019 u=centos |   _______________________________________________________
+< TASK [bootstrap-os : Install required python modules] >
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,682 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.100)       0:00:03.184 ********* 
+2017-06-15 08:38:39,796 p=30019 u=centos |   ____________________________________________________________
+< TASK [bootstrap-os : Check presence of fastestmirror.conf] >
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,797 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.115)       0:00:03.300 ********* 
+2017-06-15 08:38:39,911 p=30019 u=centos |   ____________________________________________________
+< TASK [bootstrap-os : Disable fastestmirror plugin] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:39,912 p=30019 u=centos |  Thursday 15 June 2017  08:38:39 +0000 (0:00:00.114)       0:00:03.414 ********* 
+2017-06-15 08:38:40,027 p=30019 u=centos |   ________________________________________________________
+/ TASK [bootstrap-os : Install packages requirements for \
+\ bootstrap]                                             /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:40,028 p=30019 u=centos |  Thursday 15 June 2017  08:38:40 +0000 (0:00:00.115)       0:00:03.530 ********* 
+2017-06-15 08:38:40,132 p=30019 u=centos |   __________________________________________
+< TASK [bootstrap-os : Remove require tty] >
+ ------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:40,133 p=30019 u=centos |  Thursday 15 June 2017  08:38:40 +0000 (0:00:00.105)       0:00:03.636 ********* 
+2017-06-15 08:38:41,807 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:41,872 p=30019 u=centos |   ____________________________________________
+< TASK [bootstrap-os : check if atomic host] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:41,873 p=30019 u=centos |  Thursday 15 June 2017  08:38:41 +0000 (0:00:01.739)       0:00:05.375 ********* 
+2017-06-15 08:38:42,320 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:42,387 p=30019 u=centos |   ________________________________
+< TASK [bootstrap-os : set_fact] >
+ --------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:42,389 p=30019 u=centos |  Thursday 15 June 2017  08:38:42 +0000 (0:00:00.515)       0:00:05.891 ********* 
+2017-06-15 08:38:42,436 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:42,513 p=30019 u=centos |   ______________________________________________
+< TASK [bootstrap-os : Gather nodes hostnames] >
+ ----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:42,514 p=30019 u=centos |  Thursday 15 June 2017  08:38:42 +0000 (0:00:00.125)       0:00:06.016 ********* 
+2017-06-15 08:38:43,646 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:43,726 p=30019 u=centos |   ____________________________________________________________
+/ TASK [bootstrap-os : Assign inventory name to unconfigured \
+\ hostnames]                                                 /
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:43,728 p=30019 u=centos |  Thursday 15 June 2017  08:38:43 +0000 (0:00:01.213)       0:00:07.230 ********* 
+2017-06-15 08:38:45,091 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:38:45,161 p=30019 u=centos |   _____________
+< PLAY [temp] >
+ -------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:45,227 p=30019 u=centos |   ________________________
+< TASK [Gathering Facts] >
+ ------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:45,228 p=30019 u=centos |  Thursday 15 June 2017  08:38:45 +0000 (0:00:01.500)       0:00:08.730 ********* 
+2017-06-15 08:38:46,112 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:46,209 p=30019 u=centos |   _____________
+< PLAY [temp] >
+ -------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,408 p=30019 u=centos |   ____________________________________________
+< TASK [kargo-defaults : Configure defaults] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,410 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:01.181)       0:00:09.912 ********* 
+2017-06-15 08:38:46,461 p=30019 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:38:46,531 p=30019 u=centos |   ____________________________________________
+< TASK [kernel-upgrade : install ELRepo key] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,532 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:00.122)       0:00:10.034 ********* 
+2017-06-15 08:38:46,647 p=30019 u=centos |   ___________________________________________________
+< TASK [kernel-upgrade : install elrepo repository] >
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,648 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:00.116)       0:00:10.150 ********* 
+2017-06-15 08:38:46,755 p=30019 u=centos |   ________________________________________
+< TASK [kernel-upgrade : upgrade kernel] >
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,756 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:00.107)       0:00:10.258 ********* 
+2017-06-15 08:38:46,862 p=30019 u=centos |   ___________________________________________________
+< TASK [kernel-upgrade : change default grub entry] >
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,863 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:00.107)       0:00:10.365 ********* 
+2017-06-15 08:38:46,980 p=30019 u=centos |   _________________________________________________
+< TASK [kernel-upgrade : re-generate grub-config] >
+ -------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:46,981 p=30019 u=centos |  Thursday 15 June 2017  08:38:46 +0000 (0:00:00.118)       0:00:10.484 ********* 
+2017-06-15 08:38:47,098 p=30019 u=centos |   __________________________________________
+< TASK [kernel-upgrade : Rebooting server] >
+ ------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,099 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.117)       0:00:10.601 ********* 
+2017-06-15 08:38:47,218 p=30019 u=centos |   _______________________________________________
+< TASK [kernel-upgrade : Wait for some seconds] >
+ -----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,220 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.120)       0:00:10.722 ********* 
+2017-06-15 08:38:47,339 p=30019 u=centos |   __________________________________
+< TASK [kernel-upgrade : set_fact] >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,340 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.120)       0:00:10.842 ********* 
+2017-06-15 08:38:47,454 p=30019 u=centos |   __________________________________
+< TASK [kernel-upgrade : set_fact] >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,455 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.114)       0:00:10.957 ********* 
+2017-06-15 08:38:47,575 p=30019 u=centos |   _______________________________________________________
+< TASK [kernel-upgrade : wait for bastion to come back] >
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,576 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.120)       0:00:11.078 ********* 
+2017-06-15 08:38:47,689 p=30019 u=centos |   ________________________________________________________
+/ TASK [kernel-upgrade : waiting for server to come back \
+\ (using bastion if necessary)]                          /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,691 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.114)       0:00:11.193 ********* 
+2017-06-15 08:38:47,799 p=30019 u=centos |   ___________________________________________
+< TASK [adduser : User | Create User Group] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:47,801 p=30019 u=centos |  Thursday 15 June 2017  08:38:47 +0000 (0:00:00.109)       0:00:11.303 ********* 
+2017-06-15 08:38:48,474 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:38:48,548 p=30019 u=centos |   _____________________________________
+< TASK [adduser : User | Create User] >
+ -------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:48,549 p=30019 u=centos |  Thursday 15 June 2017  08:38:48 +0000 (0:00:00.748)       0:00:12.052 ********* 
+2017-06-15 08:38:49,413 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:38:49,481 p=30019 u=centos |   ____________________________________________________________
+< TASK [kubernetes/preinstall : Stop if non systemd OS type] >
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:49,482 p=30019 u=centos |  Thursday 15 June 2017  08:38:49 +0000 (0:00:00.932)       0:00:12.984 ********* 
+2017-06-15 08:38:49,544 p=30019 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2017-06-15 08:38:49,623 p=30019 u=centos |   ____________________________________________________________
+/ TASK [kubernetes/preinstall : Force binaries directory for \
+\ Container Linux by CoreOS]                                 /
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:49,624 p=30019 u=centos |  Thursday 15 June 2017  08:38:49 +0000 (0:00:00.141)       0:00:13.126 ********* 
+2017-06-15 08:38:49,729 p=30019 u=centos |   _____________________________________________________
+< TASK [kubernetes/preinstall : check bin dir exists] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:49,731 p=30019 u=centos |  Thursday 15 June 2017  08:38:49 +0000 (0:00:00.106)       0:00:13.233 ********* 
+2017-06-15 08:38:49,987 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:50,057 p=30019 u=centos |   ________________________________________________________
+/ TASK [kubernetes/preinstall : GIT | Install script for \
+\ collecting git info]                                   /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,059 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.327)       0:00:13.561 ********* 
+2017-06-15 08:38:50,168 p=30019 u=centos |   __________________________________________________
+/ TASK [kubernetes/preinstall : GIT | generate git \
+\ informations]                                    /
+ --------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,169 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.110)       0:00:13.671 ********* 
+2017-06-15 08:38:50,272 p=30019 u=centos |   __________________________________________________
+/ TASK [kubernetes/preinstall : GIT | copy ansible \
+\ information]                                     /
+ --------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,274 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.104)       0:00:13.776 ********* 
+2017-06-15 08:38:50,369 p=30019 u=centos |   _________________________________________________________
+< TASK [kubernetes/preinstall : GIT | generate diff file] >
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,370 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.095)       0:00:13.872 ********* 
+2017-06-15 08:38:50,470 p=30019 u=centos |   _________________________________________________________
+< TASK [kubernetes/preinstall : GIT | copy git diff file] >
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,471 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.101)       0:00:13.973 ********* 
+2017-06-15 08:38:50,572 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,575 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.101)       0:00:14.075 ********* 
+2017-06-15 08:38:50,631 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:50,700 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,701 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.126)       0:00:14.204 ********* 
+2017-06-15 08:38:50,752 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:50,823 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,824 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.122)       0:00:14.326 ********* 
+2017-06-15 08:38:50,876 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:50,950 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:50,951 p=30019 u=centos |  Thursday 15 June 2017  08:38:50 +0000 (0:00:00.127)       0:00:14.453 ********* 
+2017-06-15 08:38:51,003 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,074 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,076 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.124)       0:00:14.578 ********* 
+2017-06-15 08:38:51,175 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,244 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,245 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.169)       0:00:14.747 ********* 
+2017-06-15 08:38:51,364 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,365 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.119)       0:00:14.867 ********* 
+2017-06-15 08:38:51,431 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,504 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,504 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.139)       0:00:15.006 ********* 
+2017-06-15 08:38:51,557 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,633 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,633 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.129)       0:00:15.136 ********* 
+2017-06-15 08:38:51,692 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,765 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,767 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.133)       0:00:15.269 ********* 
+2017-06-15 08:38:51,824 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:51,900 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:51,902 p=30019 u=centos |  Thursday 15 June 2017  08:38:51 +0000 (0:00:00.134)       0:00:15.404 ********* 
+2017-06-15 08:38:51,953 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,032 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,033 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.131)       0:00:15.535 ********* 
+2017-06-15 08:38:52,080 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,156 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,156 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.123)       0:00:15.659 ********* 
+2017-06-15 08:38:52,212 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,287 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,289 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.131)       0:00:15.791 ********* 
+2017-06-15 08:38:52,427 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,497 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,498 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.209)       0:00:16.001 ********* 
+2017-06-15 08:38:52,553 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,622 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,623 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.124)       0:00:16.126 ********* 
+2017-06-15 08:38:52,677 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,744 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,745 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.121)       0:00:16.247 ********* 
+2017-06-15 08:38:52,886 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:52,957 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:52,958 p=30019 u=centos |  Thursday 15 June 2017  08:38:52 +0000 (0:00:00.213)       0:00:16.460 ********* 
+2017-06-15 08:38:53,010 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,084 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,085 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.126)       0:00:16.587 ********* 
+2017-06-15 08:38:53,131 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,207 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,209 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.123)       0:00:16.711 ********* 
+2017-06-15 08:38:53,264 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,338 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,339 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.129)       0:00:16.841 ********* 
+2017-06-15 08:38:53,400 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,474 p=30019 u=centos |   _____________________________________________________
+< TASK [kubernetes/preinstall : check if atomic host] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,474 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.135)       0:00:16.976 ********* 
+2017-06-15 08:38:53,700 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,776 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,777 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.302)       0:00:17.279 ********* 
+2017-06-15 08:38:53,828 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:53,899 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:53,900 p=30019 u=centos |  Thursday 15 June 2017  08:38:53 +0000 (0:00:00.122)       0:00:17.402 ********* 
+2017-06-15 08:38:54,000 p=30019 u=centos |   _________________________________________________
+< TASK [kubernetes/preinstall : check resolvconf] >
+ -------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:54,001 p=30019 u=centos |  Thursday 15 June 2017  08:38:54 +0000 (0:00:00.101)       0:00:17.503 ********* 
+2017-06-15 08:38:54,480 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:54,554 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:54,555 p=30019 u=centos |  Thursday 15 June 2017  08:38:54 +0000 (0:00:00.553)       0:00:18.057 ********* 
+2017-06-15 08:38:54,610 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:54,675 p=30019 u=centos |   _________________________________________
+< TASK [kubernetes/preinstall : set_fact] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:54,676 p=30019 u=centos |  Thursday 15 June 2017  08:38:54 +0000 (0:00:00.120)       0:00:18.178 ********* 
+2017-06-15 08:38:54,744 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:54,818 p=30019 u=centos |   ___________________________________________________
+/ TASK [kubernetes/preinstall : check if kubelet is \
+\ configured]                                       /
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:54,819 p=30019 u=centos |  Thursday 15 June 2017  08:38:54 +0000 (0:00:00.142)       0:00:18.321 ********* 
+2017-06-15 08:38:55,080 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:55,154 p=30019 u=centos |   __________________________________________________
+/ TASK [kubernetes/preinstall : check if early DNS \
+\ configuration stage]                             /
+ --------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,155 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.336)       0:00:18.658 ********* 
+2017-06-15 08:38:55,213 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:55,292 p=30019 u=centos |   _________________________________________________________
+< TASK [kubernetes/preinstall : target resolv.conf files] >
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,293 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.137)       0:00:18.795 ********* 
+2017-06-15 08:38:55,365 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:55,433 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : target temporary resolvconf \
+\ cloud init file (Container Linux by CoreOS)]              /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,434 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.140)       0:00:18.936 ********* 
+2017-06-15 08:38:55,538 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : check if /etc/dhclient.conf \
+\ exists]                                                   /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,539 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.105)       0:00:19.042 ********* 
+2017-06-15 08:38:55,754 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:55,828 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : target dhclient conf file for \
+\ /etc/dhclient.conf]                                         /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,829 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.289)       0:00:19.331 ********* 
+2017-06-15 08:38:55,950 p=30019 u=centos |   ________________________________________
+/ TASK [kubernetes/preinstall : check if \
+\ /etc/dhcp/dhclient.conf exists]        /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:55,951 p=30019 u=centos |  Thursday 15 June 2017  08:38:55 +0000 (0:00:00.121)       0:00:19.453 ********* 
+2017-06-15 08:38:56,149 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:56,216 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : target dhclient conf file for \
+\ /etc/dhcp/dhclient.conf]                                    /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,217 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.266)       0:00:19.719 ********* 
+2017-06-15 08:38:56,326 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : target dhclient hook file for \
+\ Red Hat family]                                             /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,327 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.109)       0:00:19.829 ********* 
+2017-06-15 08:38:56,386 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:56,453 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : target dhclient hook file for \
+\ Debian family]                                              /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,454 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.126)       0:00:19.956 ********* 
+2017-06-15 08:38:56,574 p=30019 u=centos |   __________________________________________________________
+/ TASK [kubernetes/preinstall : generate search domains to \
+\ resolvconf]                                              /
+ ----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,575 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.120)       0:00:20.077 ********* 
+2017-06-15 08:38:56,646 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:56,719 p=30019 u=centos |   __________________________________________________________
+/ TASK [kubernetes/preinstall : pick dnsmasq cluster IP or \
+\ default resolver]                                        /
+ ----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,720 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.145)       0:00:20.222 ********* 
+2017-06-15 08:38:56,791 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:56,860 p=30019 u=centos |   _______________________________________________________
+/ TASK [kubernetes/preinstall : generate nameservers to \
+\ resolvconf]                                           /
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,861 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.140)       0:00:20.363 ********* 
+2017-06-15 08:38:56,915 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:38:56,983 p=30019 u=centos |   _____________________________________________________________
+< TASK [kubernetes/preinstall : gather os specific variables] >
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:56,984 p=30019 u=centos |  Thursday 15 June 2017  08:38:56 +0000 (0:00:00.123)       0:00:20.486 ********* 
+2017-06-15 08:38:57,051 p=30019 u=centos |  ok: [temp1] => (item=/home/centos/kargo/roles/kubernetes/preinstall/vars/../vars/centos.yml)
+2017-06-15 08:38:57,125 p=30019 u=centos |   ________________________________________________________
+/ TASK [kubernetes/preinstall : Create kubernetes config \
+\ directory]                                             /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,127 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.142)       0:00:20.629 ********* 
+2017-06-15 08:38:57,224 p=30019 u=centos |   ________________________________________________________
+/ TASK [kubernetes/preinstall : Create kubernetes script \
+\ directory]                                             /
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,224 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.097)       0:00:20.727 ********* 
+2017-06-15 08:38:57,324 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : Create kubernetes manifests \
+\ directory]                                                /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,325 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.100)       0:00:20.828 ********* 
+2017-06-15 08:38:57,432 p=30019 u=centos |   ___________________________________________________________
+< TASK [kubernetes/preinstall : check cloud_provider value] >
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,433 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.107)       0:00:20.935 ********* 
+2017-06-15 08:38:57,563 p=30019 u=centos |   ________________________________________
+< TASK [kubernetes/preinstall : include] >
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,564 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.130)       0:00:21.066 ********* 
+2017-06-15 08:38:57,664 p=30019 u=centos |   _______________________________________________________
+< TASK [kubernetes/preinstall : Create cni directories] >
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,665 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.100)       0:00:21.167 ********* 
+2017-06-15 08:38:57,813 p=30019 u=centos |   _________________________________________________________
+/ TASK [kubernetes/preinstall : Update package management \
+\ cache (YUM)]                                            /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:38:57,814 p=30019 u=centos |  Thursday 15 June 2017  08:38:57 +0000 (0:00:00.149)       0:00:21.316 ********* 
+2017-06-15 08:39:13,192 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:13,266 p=30019 u=centos |   _________________________________________________________
+/ TASK [kubernetes/preinstall : Install latest version of \
+\ python-apt for Debian distribs]                         /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:13,268 p=30019 u=centos |  Thursday 15 June 2017  08:39:13 +0000 (0:00:15.453)       0:00:36.770 ********* 
+2017-06-15 08:39:13,387 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : Install python-dnf for latest \
+\ RedHat versions]                                            /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:13,387 p=30019 u=centos |  Thursday 15 June 2017  08:39:13 +0000 (0:00:00.119)       0:00:36.890 ********* 
+2017-06-15 08:39:13,485 p=30019 u=centos |   _______________________________________________________
+/ TASK [kubernetes/preinstall : Install epel-release on \
+\ RedHat/CentOS]                                        /
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:13,486 p=30019 u=centos |  Thursday 15 June 2017  08:39:13 +0000 (0:00:00.098)       0:00:36.988 ********* 
+2017-06-15 08:39:15,927 p=30019 u=centos |   [WARNING]: Consider using yum, dnf or zypper module rather than running rpm
+
+2017-06-15 08:39:15,927 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:16,009 p=30019 u=centos |   ________________________________________________
+/ TASK [kubernetes/preinstall : Install packages \
+\ requirements]                                  /
+ ------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:16,010 p=30019 u=centos |  Thursday 15 June 2017  08:39:16 +0000 (0:00:02.523)       0:00:39.512 ********* 
+2017-06-15 08:39:40,953 p=30019 u=centos |  changed: [temp1] => (item=[u'libselinux-python', u'device-mapper-libs', u'python-httplib2', u'openssl', u'curl', u'rsync', u'bash-completion', u'socat', u'unzip'])
+2017-06-15 08:39:41,033 p=30019 u=centos |   _________________________________________________________
+< TASK [kubernetes/preinstall : Confirm selinux deployed] >
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:41,034 p=30019 u=centos |  Thursday 15 June 2017  08:39:41 +0000 (0:00:25.024)       0:01:04.536 ********* 
+2017-06-15 08:39:41,326 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:41,400 p=30019 u=centos |   _____________________________________________________
+/ TASK [kubernetes/preinstall : Set selinux policy to \
+\ permissive]                                         /
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:41,401 p=30019 u=centos |  Thursday 15 June 2017  08:39:41 +0000 (0:00:00.366)       0:01:04.903 ********* 
+2017-06-15 08:39:41,920 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:41,992 p=30019 u=centos |   ________________________________________________________
+< TASK [kubernetes/preinstall : Disable IPv6 DNS lookup] >
+ --------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:41,993 p=30019 u=centos |  Thursday 15 June 2017  08:39:41 +0000 (0:00:00.592)       0:01:05.496 ********* 
+2017-06-15 08:39:42,105 p=30019 u=centos |   _____________________________________________________________
+< TASK [kubernetes/preinstall : set default sysctl file path] >
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:42,107 p=30019 u=centos |  Thursday 15 June 2017  08:39:42 +0000 (0:00:00.113)       0:01:05.609 ********* 
+2017-06-15 08:39:42,159 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:42,232 p=30019 u=centos |   ________________________________________________
+/ TASK [kubernetes/preinstall : Stat sysctl file \
+\ configuration]                                 /
+ ------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:42,234 p=30019 u=centos |  Thursday 15 June 2017  08:39:42 +0000 (0:00:00.126)       0:01:05.736 ********* 
+2017-06-15 08:39:42,508 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:42,579 p=30019 u=centos |   __________________________________________________________
+/ TASK [kubernetes/preinstall : Change sysctl file path to \
+\ link source if linked]                                   /
+ ----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:42,580 p=30019 u=centos |  Thursday 15 June 2017  08:39:42 +0000 (0:00:00.346)       0:01:06.083 ********* 
+2017-06-15 08:39:42,647 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:42,713 p=30019 u=centos |   _____________________________________________________
+< TASK [kubernetes/preinstall : Enable ip forwarding] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:42,714 p=30019 u=centos |  Thursday 15 June 2017  08:39:42 +0000 (0:00:00.133)       0:01:06.217 ********* 
+2017-06-15 08:39:43,240 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:39:43,312 p=30019 u=centos |   ___________________________________________________
+< TASK [kubernetes/preinstall : Write cloud-config] >
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:43,313 p=30019 u=centos |  Thursday 15 June 2017  08:39:43 +0000 (0:00:00.598)       0:01:06.815 ********* 
+2017-06-15 08:39:43,447 p=30019 u=centos |   __________________________________________________________
+/ TASK [kubernetes/preinstall : Hosts | populate inventory \
+\ into hosts file]                                         /
+ ----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:43,448 p=30019 u=centos |  Thursday 15 June 2017  08:39:43 +0000 (0:00:00.134)       0:01:06.950 ********* 
+2017-06-15 08:39:44,109 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:39:44,173 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : Hosts | populate kubernetes \
+\ loadbalancer address into hosts file]                     /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:44,173 p=30019 u=centos |  Thursday 15 June 2017  08:39:44 +0000 (0:00:00.725)       0:01:07.676 ********* 
+2017-06-15 08:39:44,274 p=30019 u=centos |   _________________________________________________________
+/ TASK [kubernetes/preinstall : Hosts | localhost ipv4 in \
+\ hosts file]                                             /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:44,275 p=30019 u=centos |  Thursday 15 June 2017  08:39:44 +0000 (0:00:00.101)       0:01:07.777 ********* 
+2017-06-15 08:39:44,499 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:39:44,570 p=30019 u=centos |   _________________________________________________________
+/ TASK [kubernetes/preinstall : Hosts | localhost ipv6 in \
+\ hosts file]                                             /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:44,571 p=30019 u=centos |  Thursday 15 June 2017  08:39:44 +0000 (0:00:00.296)       0:01:08.073 ********* 
+2017-06-15 08:39:44,801 p=30019 u=centos |  changed: [temp1]
+2017-06-15 08:39:44,873 p=30019 u=centos |   ____________________________________________________________
+/ TASK [kubernetes/preinstall : create temporary resolveconf \
+\ cloud init file]                                           /
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:44,874 p=30019 u=centos |  Thursday 15 June 2017  08:39:44 +0000 (0:00:00.303)       0:01:08.377 ********* 
+2017-06-15 08:39:44,980 p=30019 u=centos |   ___________________________________________________
+/ TASK [kubernetes/preinstall : Add                 \
+\ domain/search/nameservers/options to resolv.conf] /
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:44,981 p=30019 u=centos |  Thursday 15 June 2017  08:39:44 +0000 (0:00:00.106)       0:01:08.483 ********* 
+2017-06-15 08:39:45,089 p=30019 u=centos |   ________________________________________________
+/ TASK [kubernetes/preinstall : Remove           \
+\ search/domain/nameserver options before block] /
+ ------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,090 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.108)       0:01:08.592 ********* 
+2017-06-15 08:39:45,292 p=30019 u=centos |   _______________________________________________
+/ TASK [kubernetes/preinstall : Remove          \
+\ search/domain/nameserver options after block] /
+ -----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,294 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.203)       0:01:08.796 ********* 
+2017-06-15 08:39:45,469 p=30019 u=centos |   _________________________________________________________
+/ TASK [kubernetes/preinstall : get temporary resolveconf \
+\ cloud init file content]                                /
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,469 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.175)       0:01:08.972 ********* 
+2017-06-15 08:39:45,587 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : persist resolvconf cloud init \
+\ file]                                                       /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,587 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.118)       0:01:09.090 ********* 
+2017-06-15 08:39:45,701 p=30019 u=centos |   _____________________________________________________
+/ TASK [kubernetes/preinstall : Configure dhclient to \
+\ supersede search/domain/nameservers]                /
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,702 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.114)       0:01:09.204 ********* 
+2017-06-15 08:39:45,815 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : Configue dhclient hooks for \
+\ resolv.conf (non-RH)]                                     /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,816 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.114)       0:01:09.318 ********* 
+2017-06-15 08:39:45,928 p=30019 u=centos |   ___________________________________________________________
+/ TASK [kubernetes/preinstall : Configue dhclient hooks for \
+\ resolv.conf (RH-only)]                                    /
+ -----------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:45,930 p=30019 u=centos |  Thursday 15 June 2017  08:39:45 +0000 (0:00:00.113)       0:01:09.432 ********* 
+2017-06-15 08:39:46,043 p=30019 u=centos |   ____________________________________________________________
+/ TASK [kubernetes/preinstall : Remove kargo specific config \
+\ from dhclient config]                                      /
+ ------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:46,044 p=30019 u=centos |  Thursday 15 June 2017  08:39:46 +0000 (0:00:00.114)       0:01:09.546 ********* 
+2017-06-15 08:39:46,178 p=30019 u=centos |   _____________________________________________________
+/ TASK [kubernetes/preinstall : Remove kargo specific \
+\ dhclient hook]                                      /
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:46,179 p=30019 u=centos |  Thursday 15 June 2017  08:39:46 +0000 (0:00:00.134)       0:01:09.681 ********* 
+2017-06-15 08:39:46,460 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:46,535 p=30019 u=centos |   _______________________________________________________
+/ TASK [kubernetes/preinstall : Check if we are running \
+\ inside a Azure VM]                                    /
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:46,536 p=30019 u=centos |  Thursday 15 June 2017  08:39:46 +0000 (0:00:00.356)       0:01:10.038 ********* 
+2017-06-15 08:39:46,758 p=30019 u=centos |  ok: [temp1]
+2017-06-15 08:39:46,835 p=30019 u=centos |   _________________________________________________
+< TASK [kubernetes/preinstall : install growpart] >
+ -------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:46,836 p=30019 u=centos |  Thursday 15 June 2017  08:39:46 +0000 (0:00:00.300)       0:01:10.339 ********* 
+2017-06-15 08:39:46,944 p=30019 u=centos |   _____________________________________________________________
+/ TASK [kubernetes/preinstall : check if growpart needs to be \
+\ run]                                                        /
+ -------------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:46,945 p=30019 u=centos |  Thursday 15 June 2017  08:39:46 +0000 (0:00:00.108)       0:01:10.447 ********* 
+2017-06-15 08:39:47,052 p=30019 u=centos |   ______________________________________________
+< TASK [kubernetes/preinstall : check fs type] >
+ ----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:47,054 p=30019 u=centos |  Thursday 15 June 2017  08:39:47 +0000 (0:00:00.109)       0:01:10.556 ********* 
+2017-06-15 08:39:47,165 p=30019 u=centos |   _____________________________________________
+< TASK [kubernetes/preinstall : run growpart] >
+ ---------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:47,166 p=30019 u=centos |  Thursday 15 June 2017  08:39:47 +0000 (0:00:00.111)       0:01:10.668 ********* 
+2017-06-15 08:39:47,282 p=30019 u=centos |   _______________________________________________
+< TASK [kubernetes/preinstall : run xfs_growfs] >
+ -----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:47,283 p=30019 u=centos |  Thursday 15 June 2017  08:39:47 +0000 (0:00:00.117)       0:01:10.785 ********* 
+2017-06-15 08:39:47,382 p=30019 u=centos |   ____________
+< PLAY RECAP >
+ ------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2017-06-15 08:39:47,383 p=30019 u=centos |  localhost                  : ok=3    changed=0    unreachable=0    failed=0   
+2017-06-15 08:39:47,383 p=30019 u=centos |  temp1                      : ok=61   changed=8    unreachable=0    failed=0   
+2017-06-15 08:39:47,384 p=30019 u=centos |  Thursday 15 June 2017  08:39:47 +0000 (0:00:00.100)       0:01:10.886 ********* 
+2017-06-15 08:39:47,385 p=30019 u=centos |  =============================================================================== 
+2017-06-15 08:39:47,386 p=30019 u=centos |  kubernetes/preinstall : Install packages requirements ------------------ 25.02s
+2017-06-15 08:39:47,386 p=30019 u=centos |  kubernetes/preinstall : Update package management cache (YUM) ---------- 15.45s
+2017-06-15 08:39:47,387 p=30019 u=centos |  kubernetes/preinstall : Install epel-release on RedHat/CentOS ----------- 2.52s
+2017-06-15 08:39:47,387 p=30019 u=centos |  bootstrap-os : Remove require tty --------------------------------------- 1.74s
+2017-06-15 08:39:47,388 p=30019 u=centos |  bootstrap-os : Assign inventory name to unconfigured hostnames ---------- 1.50s
+2017-06-15 08:39:47,388 p=30019 u=centos |  bootstrap-os : Gather nodes hostnames ----------------------------------- 1.21s
+2017-06-15 08:39:47,388 p=30019 u=centos |  bastion-ssh-config : create ssh bastion conf ---------------------------- 1.21s
+2017-06-15 08:39:47,389 p=30019 u=centos |  Gathering Facts --------------------------------------------------------- 1.18s
+2017-06-15 08:39:47,389 p=30019 u=centos |  adduser : User | Create User -------------------------------------------- 0.93s
+2017-06-15 08:39:47,389 p=30019 u=centos |  adduser : User | Create User Group -------------------------------------- 0.75s
+2017-06-15 08:39:47,390 p=30019 u=centos |  kubernetes/preinstall : Hosts | populate inventory into hosts file ------ 0.73s
+2017-06-15 08:39:47,391 p=30019 u=centos |  kubernetes/preinstall : Enable ip forwarding ---------------------------- 0.60s
+2017-06-15 08:39:47,391 p=30019 u=centos |  kubernetes/preinstall : Set selinux policy to permissive ---------------- 0.59s
+2017-06-15 08:39:47,391 p=30019 u=centos |  kubernetes/preinstall : check resolvconf -------------------------------- 0.55s
+2017-06-15 08:39:47,391 p=30019 u=centos |  bootstrap-os : check if atomic host ------------------------------------- 0.52s
+2017-06-15 08:39:47,392 p=30019 u=centos |  kubernetes/preinstall : Confirm selinux deployed ------------------------ 0.37s
+2017-06-15 08:39:47,392 p=30019 u=centos |  kubernetes/preinstall : Remove kargo specific dhclient hook ------------- 0.36s
+2017-06-15 08:39:47,392 p=30019 u=centos |  kubernetes/preinstall : Stat sysctl file configuration ------------------ 0.35s
+2017-06-15 08:39:47,392 p=30019 u=centos |  kubernetes/preinstall : check if kubelet is configured ------------------ 0.34s
+2017-06-15 08:39:47,393 p=30019 u=centos |  kubernetes/preinstall : check bin dir exists ---------------------------- 0.33s
+2017-06-15 08:40:40,494 p=31114 u=centos |  temp1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.184.53.140\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:40:53,236 p=31275 u=centos |  temp1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"10.184.53.140\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+2017-06-15 08:55:34,328 p=4238 u=centos |  PLAY [temp] *****************************************************************************************************************************************************************************************************************
+2017-06-15 08:55:34,412 p=4238 u=centos |  TASK [docker : gather os specific variables] ********************************************************************************************************************************************************************************
+2017-06-15 08:55:34,412 p=4238 u=centos |  Thursday 15 June 2017  08:55:34 +0000 (0:00:00.176)       0:00:00.176 ********* 
+2017-06-15 08:55:34,509 p=4238 u=centos |  ok: [temp1] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 08:55:34,516 p=4238 u=centos |  TASK [docker : set dns server for docker] ***********************************************************************************************************************************************************************************
+2017-06-15 08:55:34,516 p=4238 u=centos |  Thursday 15 June 2017  08:55:34 +0000 (0:00:00.103)       0:00:00.280 ********* 
+2017-06-15 08:55:34,553 p=4238 u=centos |  fatal: [temp1]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 08:55:34,558 p=4238 u=centos |  	to retry, use: --limit @/home/centos/kargo/temp-docker.retry
+
+2017-06-15 08:55:34,558 p=4238 u=centos |  PLAY RECAP ******************************************************************************************************************************************************************************************************************
+2017-06-15 08:55:34,559 p=4238 u=centos |  temp1                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 08:55:34,560 p=4238 u=centos |  Thursday 15 June 2017  08:55:34 +0000 (0:00:00.043)       0:00:00.323 ********* 
+2017-06-15 08:55:34,560 p=4238 u=centos |  =============================================================================== 
+2017-06-15 08:55:34,560 p=4238 u=centos |  docker : gather os specific variables ----------------------------------- 0.10s
+2017-06-15 08:55:34,561 p=4238 u=centos |  docker : set dns server for docker -------------------------------------- 0.04s
+2017-06-15 08:56:43,162 p=4595 u=centos |  PLAY [temp] *****************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:43,249 p=4595 u=centos |  TASK [docker : gather os specific variables] ********************************************************************************************************************************************************************************
+2017-06-15 08:56:43,250 p=4595 u=centos |  Thursday 15 June 2017  08:56:43 +0000 (0:00:00.182)       0:00:00.182 ********* 
+2017-06-15 08:56:43,356 p=4595 u=centos |  ok: [temp1] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 08:56:43,364 p=4595 u=centos |  TASK [docker : set dns server for docker] ***********************************************************************************************************************************************************************************
+2017-06-15 08:56:43,364 p=4595 u=centos |  Thursday 15 June 2017  08:56:43 +0000 (0:00:00.114)       0:00:00.297 ********* 
+2017-06-15 08:56:43,424 p=4595 u=centos |  fatal: [temp1]: FAILED! => {"failed": true, "msg": "The conditional check 'dns_mode != 'none' and resolvconf_mode == 'docker_dns'' failed. The error was: error while evaluating conditional (dns_mode != 'none' and resolvconf_mode == 'docker_dns'): 'dns_mode' is undefined\n\nThe error appears to have been in '/home/centos/kargo/roles/docker/tasks/set_facts_dns.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: set dns server for docker\n  ^ here\n"}
+2017-06-15 08:56:43,429 p=4595 u=centos |  	to retry, use: --limit @/home/centos/kargo/temp-docker.retry
+
+2017-06-15 08:56:43,429 p=4595 u=centos |  PLAY RECAP ******************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:43,430 p=4595 u=centos |  temp1                      : ok=1    changed=0    unreachable=0    failed=1   
+2017-06-15 08:56:43,431 p=4595 u=centos |  Thursday 15 June 2017  08:56:43 +0000 (0:00:00.065)       0:00:00.363 ********* 
+2017-06-15 08:56:43,431 p=4595 u=centos |  =============================================================================== 
+2017-06-15 08:56:43,431 p=4595 u=centos |  docker : gather os specific variables ----------------------------------- 0.11s
+2017-06-15 08:56:43,432 p=4595 u=centos |  docker : set dns server for docker -------------------------------------- 0.07s
+2017-06-15 08:56:51,932 p=4734 u=centos |  PLAY [localhost] ************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:52,017 p=4734 u=centos |  TASK [kargo-defaults : Configure defaults] **********************************************************************************************************************************************************************************
+2017-06-15 08:56:52,017 p=4734 u=centos |  Thursday 15 June 2017  08:56:52 +0000 (0:00:00.095)       0:00:00.095 ********* 
+2017-06-15 08:56:52,062 p=4734 u=centos |  ok: [localhost] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:56:52,067 p=4734 u=centos |  TASK [bastion-ssh-config : set_fact] ****************************************************************************************************************************************************************************************
+2017-06-15 08:56:52,067 p=4734 u=centos |  Thursday 15 June 2017  08:56:52 +0000 (0:00:00.049)       0:00:00.145 ********* 
+2017-06-15 08:56:52,175 p=4734 u=centos |  ok: [localhost]
+2017-06-15 08:56:52,182 p=4734 u=centos |  TASK [bastion-ssh-config : set_fact] ****************************************************************************************************************************************************************************************
+2017-06-15 08:56:52,183 p=4734 u=centos |  Thursday 15 June 2017  08:56:52 +0000 (0:00:00.115)       0:00:00.261 ********* 
+2017-06-15 08:56:52,209 p=4734 u=centos |  TASK [bastion-ssh-config : set_fact] ****************************************************************************************************************************************************************************************
+2017-06-15 08:56:52,209 p=4734 u=centos |  Thursday 15 June 2017  08:56:52 +0000 (0:00:00.026)       0:00:00.287 ********* 
+2017-06-15 08:56:52,234 p=4734 u=centos |  TASK [bastion-ssh-config : create ssh bastion conf] *************************************************************************************************************************************************************************
+2017-06-15 08:56:52,236 p=4734 u=centos |  Thursday 15 June 2017  08:56:52 +0000 (0:00:00.026)       0:00:00.313 ********* 
+2017-06-15 08:56:53,246 p=4734 u=centos |  ok: [localhost]
+2017-06-15 08:56:53,306 p=4734 u=centos |  PLAY [temp] *****************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:53,343 p=4734 u=centos |  TASK [kargo-defaults : Configure defaults] **********************************************************************************************************************************************************************************
+2017-06-15 08:56:53,343 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:01.107)       0:00:01.421 ********* 
+2017-06-15 08:56:53,387 p=4734 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:56:53,395 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Check if bootstrap is needed] **************************************************************************************************************************************************************
+2017-06-15 08:56:53,396 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.052)       0:00:01.473 ********* 
+2017-06-15 08:56:53,453 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Install python 2.x and pip] ****************************************************************************************************************************************************************
+2017-06-15 08:56:53,454 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.057)       0:00:01.531 ********* 
+2017-06-15 08:56:53,489 p=4734 u=centos |  TASK [bootstrap-os : set_fact] **********************************************************************************************************************************************************************************************
+2017-06-15 08:56:53,490 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.036)       0:00:01.568 ********* 
+2017-06-15 08:56:53,524 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Check if bootstrap is needed] **************************************************************************************************************************************************************
+2017-06-15 08:56:53,524 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.034)       0:00:01.602 ********* 
+2017-06-15 08:56:53,560 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Run bootstrap.sh] **************************************************************************************************************************************************************************
+2017-06-15 08:56:53,561 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.036)       0:00:01.639 ********* 
+2017-06-15 08:56:53,605 p=4734 u=centos |  TASK [bootstrap-os : set_fact] **********************************************************************************************************************************************************************************************
+2017-06-15 08:56:53,607 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.045)       0:00:01.684 ********* 
+2017-06-15 08:56:53,645 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Check if we need to install pip] ***********************************************************************************************************************************************************
+2017-06-15 08:56:53,646 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.038)       0:00:01.723 ********* 
+2017-06-15 08:56:53,685 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Copy get-pip.py] ***************************************************************************************************************************************************************************
+2017-06-15 08:56:53,686 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.039)       0:00:01.763 ********* 
+2017-06-15 08:56:53,720 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Install pip] *******************************************************************************************************************************************************************************
+2017-06-15 08:56:53,721 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.035)       0:00:01.798 ********* 
+2017-06-15 08:56:53,757 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Remove get-pip.py] *************************************************************************************************************************************************************************
+2017-06-15 08:56:53,758 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.037)       0:00:01.836 ********* 
+2017-06-15 08:56:53,799 p=4734 u=centos |  TASK [bootstrap-os : Bootstrap | Install pip launcher] **********************************************************************************************************************************************************************
+2017-06-15 08:56:53,800 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.041)       0:00:01.877 ********* 
+2017-06-15 08:56:53,835 p=4734 u=centos |  TASK [bootstrap-os : Install required python modules] ***********************************************************************************************************************************************************************
+2017-06-15 08:56:53,835 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.035)       0:00:01.913 ********* 
+2017-06-15 08:56:53,880 p=4734 u=centos |  TASK [bootstrap-os : Check presence of fastestmirror.conf] ******************************************************************************************************************************************************************
+2017-06-15 08:56:53,881 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.045)       0:00:01.958 ********* 
+2017-06-15 08:56:53,921 p=4734 u=centos |  TASK [bootstrap-os : Disable fastestmirror plugin] **************************************************************************************************************************************************************************
+2017-06-15 08:56:53,921 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.040)       0:00:01.999 ********* 
+2017-06-15 08:56:53,963 p=4734 u=centos |  TASK [bootstrap-os : Install packages requirements for bootstrap] ***********************************************************************************************************************************************************
+2017-06-15 08:56:53,964 p=4734 u=centos |  Thursday 15 June 2017  08:56:53 +0000 (0:00:00.042)       0:00:02.041 ********* 
+2017-06-15 08:56:54,005 p=4734 u=centos |  TASK [bootstrap-os : Remove require tty] ************************************************************************************************************************************************************************************
+2017-06-15 08:56:54,005 p=4734 u=centos |  Thursday 15 June 2017  08:56:54 +0000 (0:00:00.041)       0:00:02.083 ********* 
+2017-06-15 08:56:55,118 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:55,127 p=4734 u=centos |  TASK [bootstrap-os : check if atomic host] **********************************************************************************************************************************************************************************
+2017-06-15 08:56:55,128 p=4734 u=centos |  Thursday 15 June 2017  08:56:55 +0000 (0:00:01.122)       0:00:03.205 ********* 
+2017-06-15 08:56:55,596 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:55,606 p=4734 u=centos |  TASK [bootstrap-os : set_fact] **********************************************************************************************************************************************************************************************
+2017-06-15 08:56:55,607 p=4734 u=centos |  Thursday 15 June 2017  08:56:55 +0000 (0:00:00.479)       0:00:03.684 ********* 
+2017-06-15 08:56:55,657 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:55,666 p=4734 u=centos |  TASK [bootstrap-os : Gather nodes hostnames] ********************************************************************************************************************************************************************************
+2017-06-15 08:56:55,666 p=4734 u=centos |  Thursday 15 June 2017  08:56:55 +0000 (0:00:00.059)       0:00:03.744 ********* 
+2017-06-15 08:56:56,721 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:56,729 p=4734 u=centos |  TASK [bootstrap-os : Assign inventory name to unconfigured hostnames] *******************************************************************************************************************************************************
+2017-06-15 08:56:56,729 p=4734 u=centos |  Thursday 15 June 2017  08:56:56 +0000 (0:00:01.063)       0:00:04.807 ********* 
+2017-06-15 08:56:56,788 p=4734 u=centos |  PLAY [temp] *****************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:56,806 p=4734 u=centos |  PLAY [temp] *****************************************************************************************************************************************************************************************************************
+2017-06-15 08:56:56,950 p=4734 u=centos |  TASK [kargo-defaults : Configure defaults] **********************************************************************************************************************************************************************************
+2017-06-15 08:56:56,951 p=4734 u=centos |  Thursday 15 June 2017  08:56:56 +0000 (0:00:00.221)       0:00:05.028 ********* 
+2017-06-15 08:56:56,997 p=4734 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "Check roles/kargo-defaults/defaults/main.yml"
+}
+2017-06-15 08:56:57,006 p=4734 u=centos |  TASK [kernel-upgrade : install ELRepo key] **********************************************************************************************************************************************************************************
+2017-06-15 08:56:57,006 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.055)       0:00:05.084 ********* 
+2017-06-15 08:56:57,049 p=4734 u=centos |  TASK [kernel-upgrade : install elrepo repository] ***************************************************************************************************************************************************************************
+2017-06-15 08:56:57,049 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.043)       0:00:05.127 ********* 
+2017-06-15 08:56:57,096 p=4734 u=centos |  TASK [kernel-upgrade : upgrade kernel] **************************************************************************************************************************************************************************************
+2017-06-15 08:56:57,097 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.047)       0:00:05.175 ********* 
+2017-06-15 08:56:57,144 p=4734 u=centos |  TASK [kernel-upgrade : change default grub entry] ***************************************************************************************************************************************************************************
+2017-06-15 08:56:57,144 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.047)       0:00:05.222 ********* 
+2017-06-15 08:56:57,185 p=4734 u=centos |  TASK [kernel-upgrade : re-generate grub-config] *****************************************************************************************************************************************************************************
+2017-06-15 08:56:57,186 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.041)       0:00:05.264 ********* 
+2017-06-15 08:56:57,227 p=4734 u=centos |  TASK [kernel-upgrade : Rebooting server] ************************************************************************************************************************************************************************************
+2017-06-15 08:56:57,228 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.041)       0:00:05.305 ********* 
+2017-06-15 08:56:57,277 p=4734 u=centos |  TASK [kernel-upgrade : Wait for some seconds] *******************************************************************************************************************************************************************************
+2017-06-15 08:56:57,277 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.049)       0:00:05.355 ********* 
+2017-06-15 08:56:57,326 p=4734 u=centos |  TASK [kernel-upgrade : set_fact] ********************************************************************************************************************************************************************************************
+2017-06-15 08:56:57,327 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.049)       0:00:05.404 ********* 
+2017-06-15 08:56:57,379 p=4734 u=centos |  TASK [kernel-upgrade : set_fact] ********************************************************************************************************************************************************************************************
+2017-06-15 08:56:57,380 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.052)       0:00:05.458 ********* 
+2017-06-15 08:56:57,427 p=4734 u=centos |  TASK [kernel-upgrade : wait for bastion to come back] ***********************************************************************************************************************************************************************
+2017-06-15 08:56:57,427 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.047)       0:00:05.505 ********* 
+2017-06-15 08:56:57,475 p=4734 u=centos |  TASK [kernel-upgrade : waiting for server to come back (using bastion if necessary)] ****************************************************************************************************************************************
+2017-06-15 08:56:57,475 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.048)       0:00:05.553 ********* 
+2017-06-15 08:56:57,517 p=4734 u=centos |  TASK [adduser : User | Create User Group] ***********************************************************************************************************************************************************************************
+2017-06-15 08:56:57,518 p=4734 u=centos |  Thursday 15 June 2017  08:56:57 +0000 (0:00:00.041)       0:00:05.595 ********* 
+2017-06-15 08:56:58,024 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:58,033 p=4734 u=centos |  TASK [adduser : User | Create User] *****************************************************************************************************************************************************************************************
+2017-06-15 08:56:58,033 p=4734 u=centos |  Thursday 15 June 2017  08:56:58 +0000 (0:00:00.515)       0:00:06.111 ********* 
+2017-06-15 08:56:58,718 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:58,727 p=4734 u=centos |  TASK [kubernetes/preinstall : Stop if non systemd OS type] ******************************************************************************************************************************************************************
+2017-06-15 08:56:58,728 p=4734 u=centos |  Thursday 15 June 2017  08:56:58 +0000 (0:00:00.694)       0:00:06.805 ********* 
+2017-06-15 08:56:58,795 p=4734 u=centos |  ok: [temp1] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2017-06-15 08:56:58,804 p=4734 u=centos |  TASK [kubernetes/preinstall : Force binaries directory for Container Linux by CoreOS] ***************************************************************************************************************************************
+2017-06-15 08:56:58,805 p=4734 u=centos |  Thursday 15 June 2017  08:56:58 +0000 (0:00:00.076)       0:00:06.882 ********* 
+2017-06-15 08:56:58,845 p=4734 u=centos |  TASK [kubernetes/preinstall : check bin dir exists] *************************************************************************************************************************************************************************
+2017-06-15 08:56:58,845 p=4734 u=centos |  Thursday 15 June 2017  08:56:58 +0000 (0:00:00.040)       0:00:06.923 ********* 
+2017-06-15 08:56:59,089 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,098 p=4734 u=centos |  TASK [kubernetes/preinstall : GIT | Install script for collecting git info] *************************************************************************************************************************************************
+2017-06-15 08:56:59,098 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.252)       0:00:07.176 ********* 
+2017-06-15 08:56:59,136 p=4734 u=centos |  TASK [kubernetes/preinstall : GIT | generate git informations] **************************************************************************************************************************************************************
+2017-06-15 08:56:59,137 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.038)       0:00:07.215 ********* 
+2017-06-15 08:56:59,175 p=4734 u=centos |  TASK [kubernetes/preinstall : GIT | copy ansible information] ***************************************************************************************************************************************************************
+2017-06-15 08:56:59,175 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.038)       0:00:07.253 ********* 
+2017-06-15 08:56:59,213 p=4734 u=centos |  TASK [kubernetes/preinstall : GIT | generate diff file] *********************************************************************************************************************************************************************
+2017-06-15 08:56:59,213 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.037)       0:00:07.291 ********* 
+2017-06-15 08:56:59,254 p=4734 u=centos |  TASK [kubernetes/preinstall : GIT | copy git diff file] *********************************************************************************************************************************************************************
+2017-06-15 08:56:59,255 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.041)       0:00:07.332 ********* 
+2017-06-15 08:56:59,293 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,294 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.039)       0:00:07.371 ********* 
+2017-06-15 08:56:59,345 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,352 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,353 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.059)       0:00:07.431 ********* 
+2017-06-15 08:56:59,410 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,417 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,418 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.064)       0:00:07.495 ********* 
+2017-06-15 08:56:59,468 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,478 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,478 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.060)       0:00:07.556 ********* 
+2017-06-15 08:56:59,534 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,543 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,544 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.065)       0:00:07.621 ********* 
+2017-06-15 08:56:59,629 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,638 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,639 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.095)       0:00:07.716 ********* 
+2017-06-15 08:56:59,682 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,683 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.043)       0:00:07.760 ********* 
+2017-06-15 08:56:59,749 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,761 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,763 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.079)       0:00:07.840 ********* 
+2017-06-15 08:56:59,812 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,822 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,822 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.059)       0:00:07.900 ********* 
+2017-06-15 08:56:59,873 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,886 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,886 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.064)       0:00:07.964 ********* 
+2017-06-15 08:56:59,935 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:56:59,944 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:56:59,945 p=4734 u=centos |  Thursday 15 June 2017  08:56:59 +0000 (0:00:00.058)       0:00:08.022 ********* 
+2017-06-15 08:56:59,992 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,001 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,002 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.057)       0:00:08.080 ********* 
+2017-06-15 08:57:00,052 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,064 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,065 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.062)       0:00:08.142 ********* 
+2017-06-15 08:57:00,119 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,127 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,127 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.062)       0:00:08.205 ********* 
+2017-06-15 08:57:00,275 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,282 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,282 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.154)       0:00:08.360 ********* 
+2017-06-15 08:57:00,334 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,343 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,343 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.060)       0:00:08.421 ********* 
+2017-06-15 08:57:00,397 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,407 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,408 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.064)       0:00:08.485 ********* 
+2017-06-15 08:57:00,555 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,564 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,565 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.156)       0:00:08.642 ********* 
+2017-06-15 08:57:00,616 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,624 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,625 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.060)       0:00:08.702 ********* 
+2017-06-15 08:57:00,672 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,681 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,682 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.056)       0:00:08.760 ********* 
+2017-06-15 08:57:00,734 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,743 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:00,744 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.061)       0:00:08.821 ********* 
+2017-06-15 08:57:00,797 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:00,807 p=4734 u=centos |  TASK [kubernetes/preinstall : check if atomic host] *************************************************************************************************************************************************************************
+2017-06-15 08:57:00,807 p=4734 u=centos |  Thursday 15 June 2017  08:57:00 +0000 (0:00:00.063)       0:00:08.885 ********* 
+2017-06-15 08:57:01,060 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:01,071 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:01,071 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.263)       0:00:09.149 ********* 
+2017-06-15 08:57:01,129 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:01,137 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:01,137 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.066)       0:00:09.215 ********* 
+2017-06-15 08:57:01,174 p=4734 u=centos |  TASK [kubernetes/preinstall : check resolvconf] *****************************************************************************************************************************************************************************
+2017-06-15 08:57:01,175 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.037)       0:00:09.253 ********* 
+2017-06-15 08:57:01,697 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:01,706 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:01,707 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.531)       0:00:09.785 ********* 
+2017-06-15 08:57:01,770 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:01,781 p=4734 u=centos |  TASK [kubernetes/preinstall : set_fact] *************************************************************************************************************************************************************************************
+2017-06-15 08:57:01,781 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.073)       0:00:09.859 ********* 
+2017-06-15 08:57:01,846 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:01,856 p=4734 u=centos |  TASK [kubernetes/preinstall : check if kubelet is configured] ***************************************************************************************************************************************************************
+2017-06-15 08:57:01,856 p=4734 u=centos |  Thursday 15 June 2017  08:57:01 +0000 (0:00:00.075)       0:00:09.934 ********* 
+2017-06-15 08:57:02,111 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,119 p=4734 u=centos |  TASK [kubernetes/preinstall : check if early DNS configuration stage] *******************************************************************************************************************************************************
+2017-06-15 08:57:02,120 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.263)       0:00:10.197 ********* 
+2017-06-15 08:57:02,175 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,185 p=4734 u=centos |  TASK [kubernetes/preinstall : target resolv.conf files] *********************************************************************************************************************************************************************
+2017-06-15 08:57:02,185 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.065)       0:00:10.263 ********* 
+2017-06-15 08:57:02,250 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,261 p=4734 u=centos |  TASK [kubernetes/preinstall : target temporary resolvconf cloud init file (Container Linux by CoreOS)] **********************************************************************************************************************
+2017-06-15 08:57:02,261 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.076)       0:00:10.339 ********* 
+2017-06-15 08:57:02,309 p=4734 u=centos |  TASK [kubernetes/preinstall : check if /etc/dhclient.conf exists] ***********************************************************************************************************************************************************
+2017-06-15 08:57:02,309 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.047)       0:00:10.387 ********* 
+2017-06-15 08:57:02,547 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,557 p=4734 u=centos |  TASK [kubernetes/preinstall : target dhclient conf file for /etc/dhclient.conf] *********************************************************************************************************************************************
+2017-06-15 08:57:02,557 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.248)       0:00:10.635 ********* 
+2017-06-15 08:57:02,604 p=4734 u=centos |  TASK [kubernetes/preinstall : check if /etc/dhcp/dhclient.conf exists] ******************************************************************************************************************************************************
+2017-06-15 08:57:02,605 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.047)       0:00:10.682 ********* 
+2017-06-15 08:57:02,862 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,873 p=4734 u=centos |  TASK [kubernetes/preinstall : target dhclient conf file for /etc/dhcp/dhclient.conf] ****************************************************************************************************************************************
+2017-06-15 08:57:02,873 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.268)       0:00:10.951 ********* 
+2017-06-15 08:57:02,919 p=4734 u=centos |  TASK [kubernetes/preinstall : target dhclient hook file for Red Hat family] *************************************************************************************************************************************************
+2017-06-15 08:57:02,919 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.045)       0:00:10.997 ********* 
+2017-06-15 08:57:02,975 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:02,982 p=4734 u=centos |  TASK [kubernetes/preinstall : target dhclient hook file for Debian family] **************************************************************************************************************************************************
+2017-06-15 08:57:02,982 p=4734 u=centos |  Thursday 15 June 2017  08:57:02 +0000 (0:00:00.063)       0:00:11.060 ********* 
+2017-06-15 08:57:03,024 p=4734 u=centos |  TASK [kubernetes/preinstall : generate search domains to resolvconf] ********************************************************************************************************************************************************
+2017-06-15 08:57:03,025 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.042)       0:00:11.102 ********* 
+2017-06-15 08:57:03,088 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:03,095 p=4734 u=centos |  TASK [kubernetes/preinstall : pick dnsmasq cluster IP or default resolver] **************************************************************************************************************************************************
+2017-06-15 08:57:03,096 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.070)       0:00:11.173 ********* 
+2017-06-15 08:57:03,164 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:03,173 p=4734 u=centos |  TASK [kubernetes/preinstall : generate nameservers to resolvconf] ***********************************************************************************************************************************************************
+2017-06-15 08:57:03,173 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.077)       0:00:11.251 ********* 
+2017-06-15 08:57:03,231 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:03,241 p=4734 u=centos |  TASK [kubernetes/preinstall : gather os specific variables] *****************************************************************************************************************************************************************
+2017-06-15 08:57:03,242 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.068)       0:00:11.319 ********* 
+2017-06-15 08:57:03,312 p=4734 u=centos |  ok: [temp1] => (item=/home/centos/kargo/roles/kubernetes/preinstall/vars/../vars/centos.yml)
+2017-06-15 08:57:03,322 p=4734 u=centos |  TASK [kubernetes/preinstall : Create kubernetes config directory] ***********************************************************************************************************************************************************
+2017-06-15 08:57:03,322 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.080)       0:00:11.400 ********* 
+2017-06-15 08:57:03,370 p=4734 u=centos |  TASK [kubernetes/preinstall : Create kubernetes script directory] ***********************************************************************************************************************************************************
+2017-06-15 08:57:03,371 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.048)       0:00:11.449 ********* 
+2017-06-15 08:57:03,415 p=4734 u=centos |  TASK [kubernetes/preinstall : Create kubernetes manifests directory] ********************************************************************************************************************************************************
+2017-06-15 08:57:03,415 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.044)       0:00:11.493 ********* 
+2017-06-15 08:57:03,460 p=4734 u=centos |  TASK [kubernetes/preinstall : check cloud_provider value] *******************************************************************************************************************************************************************
+2017-06-15 08:57:03,461 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.045)       0:00:11.538 ********* 
+2017-06-15 08:57:03,500 p=4734 u=centos |  TASK [kubernetes/preinstall : include] **************************************************************************************************************************************************************************************
+2017-06-15 08:57:03,501 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.039)       0:00:11.578 ********* 
+2017-06-15 08:57:03,543 p=4734 u=centos |  TASK [kubernetes/preinstall : Create cni directories] ***********************************************************************************************************************************************************************
+2017-06-15 08:57:03,544 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.043)       0:00:11.622 ********* 
+2017-06-15 08:57:03,616 p=4734 u=centos |  TASK [kubernetes/preinstall : Update package management cache (YUM)] ********************************************************************************************************************************************************
+2017-06-15 08:57:03,616 p=4734 u=centos |  Thursday 15 June 2017  08:57:03 +0000 (0:00:00.072)       0:00:11.694 ********* 
+2017-06-15 08:57:16,124 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:16,131 p=4734 u=centos |  TASK [kubernetes/preinstall : Install latest version of python-apt for Debian distribs] *************************************************************************************************************************************
+2017-06-15 08:57:16,131 p=4734 u=centos |  Thursday 15 June 2017  08:57:16 +0000 (0:00:12.514)       0:00:24.209 ********* 
+2017-06-15 08:57:16,177 p=4734 u=centos |  TASK [kubernetes/preinstall : Install python-dnf for latest RedHat versions] ************************************************************************************************************************************************
+2017-06-15 08:57:16,178 p=4734 u=centos |  Thursday 15 June 2017  08:57:16 +0000 (0:00:00.046)       0:00:24.255 ********* 
+2017-06-15 08:57:16,222 p=4734 u=centos |  TASK [kubernetes/preinstall : Install epel-release on RedHat/CentOS] ********************************************************************************************************************************************************
+2017-06-15 08:57:16,222 p=4734 u=centos |  Thursday 15 June 2017  08:57:16 +0000 (0:00:00.044)       0:00:24.300 ********* 
+2017-06-15 08:57:17,090 p=4734 u=centos |   [WARNING]: Consider using yum, dnf or zypper module rather than running rpm
+
+2017-06-15 08:57:17,091 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:17,097 p=4734 u=centos |  TASK [kubernetes/preinstall : Install packages requirements] ****************************************************************************************************************************************************************
+2017-06-15 08:57:17,097 p=4734 u=centos |  Thursday 15 June 2017  08:57:17 +0000 (0:00:00.874)       0:00:25.175 ********* 
+2017-06-15 08:57:25,035 p=4734 u=centos |  ok: [temp1] => (item=[u'libselinux-python', u'device-mapper-libs', u'python-httplib2', u'openssl', u'curl', u'rsync', u'bash-completion', u'socat', u'unzip'])
+2017-06-15 08:57:25,043 p=4734 u=centos |  TASK [kubernetes/preinstall : Confirm selinux deployed] *********************************************************************************************************************************************************************
+2017-06-15 08:57:25,043 p=4734 u=centos |  Thursday 15 June 2017  08:57:25 +0000 (0:00:07.945)       0:00:33.121 ********* 
+2017-06-15 08:57:25,371 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:25,380 p=4734 u=centos |  TASK [kubernetes/preinstall : Set selinux policy to permissive] *************************************************************************************************************************************************************
+2017-06-15 08:57:25,381 p=4734 u=centos |  Thursday 15 June 2017  08:57:25 +0000 (0:00:00.337)       0:00:33.458 ********* 
+2017-06-15 08:57:25,821 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:25,830 p=4734 u=centos |  TASK [kubernetes/preinstall : Disable IPv6 DNS lookup] **********************************************************************************************************************************************************************
+2017-06-15 08:57:25,830 p=4734 u=centos |  Thursday 15 June 2017  08:57:25 +0000 (0:00:00.449)       0:00:33.908 ********* 
+2017-06-15 08:57:25,861 p=4734 u=centos |  TASK [kubernetes/preinstall : set default sysctl file path] *****************************************************************************************************************************************************************
+2017-06-15 08:57:25,862 p=4734 u=centos |  Thursday 15 June 2017  08:57:25 +0000 (0:00:00.031)       0:00:33.939 ********* 
+2017-06-15 08:57:25,906 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:25,914 p=4734 u=centos |  TASK [kubernetes/preinstall : Stat sysctl file configuration] ***************************************************************************************************************************************************************
+2017-06-15 08:57:25,914 p=4734 u=centos |  Thursday 15 June 2017  08:57:25 +0000 (0:00:00.052)       0:00:33.992 ********* 
+2017-06-15 08:57:26,163 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:26,172 p=4734 u=centos |  TASK [kubernetes/preinstall : Change sysctl file path to link source if linked] *********************************************************************************************************************************************
+2017-06-15 08:57:26,173 p=4734 u=centos |  Thursday 15 June 2017  08:57:26 +0000 (0:00:00.258)       0:00:34.251 ********* 
+2017-06-15 08:57:26,234 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:26,244 p=4734 u=centos |  TASK [kubernetes/preinstall : Enable ip forwarding] *************************************************************************************************************************************************************************
+2017-06-15 08:57:26,244 p=4734 u=centos |  Thursday 15 June 2017  08:57:26 +0000 (0:00:00.071)       0:00:34.322 ********* 
+2017-06-15 08:57:26,807 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:26,818 p=4734 u=centos |  TASK [kubernetes/preinstall : Write cloud-config] ***************************************************************************************************************************************************************************
+2017-06-15 08:57:26,818 p=4734 u=centos |  Thursday 15 June 2017  08:57:26 +0000 (0:00:00.573)       0:00:34.896 ********* 
+2017-06-15 08:57:26,866 p=4734 u=centos |  TASK [kubernetes/preinstall : Hosts | populate inventory into hosts file] ***************************************************************************************************************************************************
+2017-06-15 08:57:26,867 p=4734 u=centos |  Thursday 15 June 2017  08:57:26 +0000 (0:00:00.048)       0:00:34.945 ********* 
+2017-06-15 08:57:27,568 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:27,577 p=4734 u=centos |  TASK [kubernetes/preinstall : Hosts | populate kubernetes loadbalancer address into hosts file] *****************************************************************************************************************************
+2017-06-15 08:57:27,578 p=4734 u=centos |  Thursday 15 June 2017  08:57:27 +0000 (0:00:00.710)       0:00:35.655 ********* 
+2017-06-15 08:57:27,623 p=4734 u=centos |  TASK [kubernetes/preinstall : Hosts | localhost ipv4 in hosts file] *********************************************************************************************************************************************************
+2017-06-15 08:57:27,623 p=4734 u=centos |  Thursday 15 June 2017  08:57:27 +0000 (0:00:00.045)       0:00:35.701 ********* 
+2017-06-15 08:57:27,875 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:27,883 p=4734 u=centos |  TASK [kubernetes/preinstall : Hosts | localhost ipv6 in hosts file] *********************************************************************************************************************************************************
+2017-06-15 08:57:27,884 p=4734 u=centos |  Thursday 15 June 2017  08:57:27 +0000 (0:00:00.260)       0:00:35.961 ********* 
+2017-06-15 08:57:28,156 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:28,167 p=4734 u=centos |  TASK [kubernetes/preinstall : create temporary resolveconf cloud init file] *************************************************************************************************************************************************
+2017-06-15 08:57:28,168 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.283)       0:00:36.245 ********* 
+2017-06-15 08:57:28,220 p=4734 u=centos |  TASK [kubernetes/preinstall : Add domain/search/nameservers/options to resolv.conf] *****************************************************************************************************************************************
+2017-06-15 08:57:28,221 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.053)       0:00:36.299 ********* 
+2017-06-15 08:57:28,284 p=4734 u=centos |  TASK [kubernetes/preinstall : Remove search/domain/nameserver options before block] *****************************************************************************************************************************************
+2017-06-15 08:57:28,285 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.063)       0:00:36.362 ********* 
+2017-06-15 08:57:28,396 p=4734 u=centos |  TASK [kubernetes/preinstall : Remove search/domain/nameserver options after block] ******************************************************************************************************************************************
+2017-06-15 08:57:28,396 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.111)       0:00:36.474 ********* 
+2017-06-15 08:57:28,506 p=4734 u=centos |  TASK [kubernetes/preinstall : get temporary resolveconf cloud init file content] ********************************************************************************************************************************************
+2017-06-15 08:57:28,506 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.109)       0:00:36.584 ********* 
+2017-06-15 08:57:28,554 p=4734 u=centos |  TASK [kubernetes/preinstall : persist resolvconf cloud init file] ***********************************************************************************************************************************************************
+2017-06-15 08:57:28,555 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.048)       0:00:36.632 ********* 
+2017-06-15 08:57:28,596 p=4734 u=centos |  TASK [kubernetes/preinstall : Configure dhclient to supersede search/domain/nameservers] ************************************************************************************************************************************
+2017-06-15 08:57:28,597 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.041)       0:00:36.674 ********* 
+2017-06-15 08:57:28,638 p=4734 u=centos |  TASK [kubernetes/preinstall : Configue dhclient hooks for resolv.conf (non-RH)] *********************************************************************************************************************************************
+2017-06-15 08:57:28,639 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.042)       0:00:36.717 ********* 
+2017-06-15 08:57:28,680 p=4734 u=centos |  TASK [kubernetes/preinstall : Configue dhclient hooks for resolv.conf (RH-only)] ********************************************************************************************************************************************
+2017-06-15 08:57:28,681 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.041)       0:00:36.758 ********* 
+2017-06-15 08:57:28,723 p=4734 u=centos |  TASK [kubernetes/preinstall : Remove kargo specific config from dhclient config] ********************************************************************************************************************************************
+2017-06-15 08:57:28,724 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.043)       0:00:36.802 ********* 
+2017-06-15 08:57:28,793 p=4734 u=centos |  TASK [kubernetes/preinstall : Remove kargo specific dhclient hook] **********************************************************************************************************************************************************
+2017-06-15 08:57:28,794 p=4734 u=centos |  Thursday 15 June 2017  08:57:28 +0000 (0:00:00.069)       0:00:36.871 ********* 
+2017-06-15 08:57:29,069 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:29,076 p=4734 u=centos |  TASK [kubernetes/preinstall : Check if we are running inside a Azure VM] ****************************************************************************************************************************************************
+2017-06-15 08:57:29,077 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.283)       0:00:37.154 ********* 
+2017-06-15 08:57:29,312 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:29,323 p=4734 u=centos |  TASK [kubernetes/preinstall : install growpart] *****************************************************************************************************************************************************************************
+2017-06-15 08:57:29,324 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.246)       0:00:37.401 ********* 
+2017-06-15 08:57:29,363 p=4734 u=centos |  TASK [kubernetes/preinstall : check if growpart needs to be run] ************************************************************************************************************************************************************
+2017-06-15 08:57:29,363 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.039)       0:00:37.441 ********* 
+2017-06-15 08:57:29,401 p=4734 u=centos |  TASK [kubernetes/preinstall : check fs type] ********************************************************************************************************************************************************************************
+2017-06-15 08:57:29,402 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.038)       0:00:37.479 ********* 
+2017-06-15 08:57:29,440 p=4734 u=centos |  TASK [kubernetes/preinstall : run growpart] *********************************************************************************************************************************************************************************
+2017-06-15 08:57:29,441 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.038)       0:00:37.518 ********* 
+2017-06-15 08:57:29,479 p=4734 u=centos |  TASK [kubernetes/preinstall : run xfs_growfs] *******************************************************************************************************************************************************************************
+2017-06-15 08:57:29,479 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.038)       0:00:37.557 ********* 
+2017-06-15 08:57:29,522 p=4734 u=centos |  TASK [docker : gather os specific variables] ********************************************************************************************************************************************************************************
+2017-06-15 08:57:29,523 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.043)       0:00:37.601 ********* 
+2017-06-15 08:57:29,600 p=4734 u=centos |  ok: [temp1] => (item=/home/centos/kargo/roles/docker/vars/../vars/redhat.yml)
+2017-06-15 08:57:29,611 p=4734 u=centos |  TASK [docker : set dns server for docker] ***********************************************************************************************************************************************************************************
+2017-06-15 08:57:29,611 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.088)       0:00:37.689 ********* 
+2017-06-15 08:57:29,678 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:29,685 p=4734 u=centos |  TASK [docker : set base docker dns facts] ***********************************************************************************************************************************************************************************
+2017-06-15 08:57:29,685 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.073)       0:00:37.763 ********* 
+2017-06-15 08:57:29,749 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:29,755 p=4734 u=centos |  TASK [docker : add upstream dns servers (only when dnsmasq is not used)] ****************************************************************************************************************************************************
+2017-06-15 08:57:29,755 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.070)       0:00:37.833 ********* 
+2017-06-15 08:57:29,803 p=4734 u=centos |  TASK [docker : add global searchdomains] ************************************************************************************************************************************************************************************
+2017-06-15 08:57:29,804 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.048)       0:00:37.882 ********* 
+2017-06-15 08:57:29,865 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:29,872 p=4734 u=centos |  TASK [docker : check system nameservers] ************************************************************************************************************************************************************************************
+2017-06-15 08:57:29,872 p=4734 u=centos |  Thursday 15 June 2017  08:57:29 +0000 (0:00:00.068)       0:00:37.950 ********* 
+2017-06-15 08:57:30,122 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:30,130 p=4734 u=centos |  TASK [docker : check system search domains] *********************************************************************************************************************************************************************************
+2017-06-15 08:57:30,130 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.257)       0:00:38.208 ********* 
+2017-06-15 08:57:30,428 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:30,438 p=4734 u=centos |  TASK [docker : add system nameservers to docker options] ********************************************************************************************************************************************************************
+2017-06-15 08:57:30,438 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.308)       0:00:38.516 ********* 
+2017-06-15 08:57:30,508 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:30,517 p=4734 u=centos |  TASK [docker : add system search domains to docker options] *****************************************************************************************************************************************************************
+2017-06-15 08:57:30,517 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.078)       0:00:38.595 ********* 
+2017-06-15 08:57:30,586 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:57:30,594 p=4734 u=centos |  TASK [docker : check number of nameservers] *********************************************************************************************************************************************************************************
+2017-06-15 08:57:30,594 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.076)       0:00:38.672 ********* 
+2017-06-15 08:57:30,640 p=4734 u=centos |  TASK [docker : check number of search domains] ******************************************************************************************************************************************************************************
+2017-06-15 08:57:30,641 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.047)       0:00:38.719 ********* 
+2017-06-15 08:57:30,689 p=4734 u=centos |  TASK [docker : check length of search domains] ******************************************************************************************************************************************************************************
+2017-06-15 08:57:30,689 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.048)       0:00:38.767 ********* 
+2017-06-15 08:57:30,740 p=4734 u=centos |  TASK [docker : check for minimum kernel version] ****************************************************************************************************************************************************************************
+2017-06-15 08:57:30,741 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.051)       0:00:38.818 ********* 
+2017-06-15 08:57:30,785 p=4734 u=centos |  TASK [docker : ensure docker repository public key is installed] ************************************************************************************************************************************************************
+2017-06-15 08:57:30,786 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.045)       0:00:38.863 ********* 
+2017-06-15 08:57:30,824 p=4734 u=centos |  TASK [docker : ensure docker repository is enabled] *************************************************************************************************************************************************************************
+2017-06-15 08:57:30,825 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.038)       0:00:38.902 ********* 
+2017-06-15 08:57:30,868 p=4734 u=centos |  TASK [docker : Configure docker repository on RedHat/CentOS] ****************************************************************************************************************************************************************
+2017-06-15 08:57:30,868 p=4734 u=centos |  Thursday 15 June 2017  08:57:30 +0000 (0:00:00.043)       0:00:38.946 ********* 
+2017-06-15 08:57:31,902 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:57:31,912 p=4734 u=centos |  TASK [docker : ensure docker packages are installed] ************************************************************************************************************************************************************************
+2017-06-15 08:57:31,913 p=4734 u=centos |  Thursday 15 June 2017  08:57:31 +0000 (0:00:01.044)       0:00:39.991 ********* 
+2017-06-15 08:58:15,597 p=4734 u=centos |  changed: [temp1] => (item={u'name': u'docker-ce-17.03.0.ce-1.el7.centos'})
+2017-06-15 08:58:15,603 p=4734 u=centos |  TASK [docker : check minimum docker version for docker_dns mode. You need at least docker version >= 1.12 for resolvconf_mode=docker_dns] ***********************************************************************************
+2017-06-15 08:58:15,604 p=4734 u=centos |  Thursday 15 June 2017  08:58:15 +0000 (0:00:43.690)       0:01:23.681 ********* 
+2017-06-15 08:58:15,891 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:58:15,898 p=4734 u=centos |  TASK [docker : Create docker service systemd directory if it doesn't exist] *************************************************************************************************************************************************
+2017-06-15 08:58:15,898 p=4734 u=centos |  Thursday 15 June 2017  08:58:15 +0000 (0:00:00.294)       0:01:23.976 ********* 
+2017-06-15 08:58:16,164 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:16,173 p=4734 u=centos |  TASK [docker : Write docker proxy drop-in] **********************************************************************************************************************************************************************************
+2017-06-15 08:58:16,173 p=4734 u=centos |  Thursday 15 June 2017  08:58:16 +0000 (0:00:00.275)       0:01:24.251 ********* 
+2017-06-15 08:58:16,214 p=4734 u=centos |  TASK [docker : Write docker.service systemd file] ***************************************************************************************************************************************************************************
+2017-06-15 08:58:16,215 p=4734 u=centos |  Thursday 15 June 2017  08:58:16 +0000 (0:00:00.040)       0:01:24.292 ********* 
+2017-06-15 08:58:17,002 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:17,011 p=4734 u=centos |  TASK [docker : Write docker.service systemd file for atomic] ****************************************************************************************************************************************************************
+2017-06-15 08:58:17,011 p=4734 u=centos |  Thursday 15 June 2017  08:58:17 +0000 (0:00:00.796)       0:01:25.089 ********* 
+2017-06-15 08:58:17,044 p=4734 u=centos |  TASK [docker : Write docker options systemd drop-in] ************************************************************************************************************************************************************************
+2017-06-15 08:58:17,044 p=4734 u=centos |  Thursday 15 June 2017  08:58:17 +0000 (0:00:00.032)       0:01:25.122 ********* 
+2017-06-15 08:58:17,825 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:17,831 p=4734 u=centos |  TASK [docker : Write docker dns systemd drop-in] ****************************************************************************************************************************************************************************
+2017-06-15 08:58:17,831 p=4734 u=centos |  Thursday 15 June 2017  08:58:17 +0000 (0:00:00.787)       0:01:25.909 ********* 
+2017-06-15 08:58:18,644 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:18,645 p=4734 u=centos |  RUNNING HANDLER [docker : restart docker] ***********************************************************************************************************************************************************************************
+2017-06-15 08:58:18,646 p=4734 u=centos |  Thursday 15 June 2017  08:58:18 +0000 (0:00:00.814)       0:01:26.723 ********* 
+2017-06-15 08:58:18,984 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:18,985 p=4734 u=centos |  RUNNING HANDLER [docker : Docker | reload systemd] **************************************************************************************************************************************************************************
+2017-06-15 08:58:18,985 p=4734 u=centos |  Thursday 15 June 2017  08:58:18 +0000 (0:00:00.339)       0:01:27.063 ********* 
+2017-06-15 08:58:19,294 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:19,296 p=4734 u=centos |  RUNNING HANDLER [docker : Docker | reload docker.socket] ********************************************************************************************************************************************************************
+2017-06-15 08:58:19,296 p=4734 u=centos |  Thursday 15 June 2017  08:58:19 +0000 (0:00:00.311)       0:01:27.374 ********* 
+2017-06-15 08:58:19,346 p=4734 u=centos |  RUNNING HANDLER [docker : Docker | reload docker] ***************************************************************************************************************************************************************************
+2017-06-15 08:58:19,348 p=4734 u=centos |  Thursday 15 June 2017  08:58:19 +0000 (0:00:00.050)       0:01:27.425 ********* 
+2017-06-15 08:58:21,346 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:21,347 p=4734 u=centos |  RUNNING HANDLER [docker : Docker | pause while Docker restarts] *************************************************************************************************************************************************************
+2017-06-15 08:58:21,348 p=4734 u=centos |  Thursday 15 June 2017  08:58:21 +0000 (0:00:02.000)       0:01:29.425 ********* 
+2017-06-15 08:58:21,401 p=4734 u=centos |  Pausing for 10 seconds
+2017-06-15 08:58:21,401 p=4734 u=centos |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2017-06-15 08:58:31,411 p=4734 u=centos |  ok: [temp1]
+2017-06-15 08:58:31,412 p=4734 u=centos |  RUNNING HANDLER [docker : Docker | wait for docker] *************************************************************************************************************************************************************************
+2017-06-15 08:58:31,413 p=4734 u=centos |  Thursday 15 June 2017  08:58:31 +0000 (0:00:10.065)       0:01:39.491 ********* 
+2017-06-15 08:58:31,737 p=4734 u=centos |  changed: [temp1]
+2017-06-15 08:58:31,746 p=4734 u=centos |  TASK [docker : ensure docker service is started and enabled] ****************************************************************************************************************************************************************
+2017-06-15 08:58:31,747 p=4734 u=centos |  Thursday 15 June 2017  08:58:31 +0000 (0:00:00.333)       0:01:39.824 ********* 
+2017-06-15 08:58:32,208 p=4734 u=centos |  changed: [temp1] => (item=docker)
+2017-06-15 08:58:32,213 p=4734 u=centos |  PLAY RECAP ******************************************************************************************************************************************************************************************************************
+2017-06-15 08:58:32,213 p=4734 u=centos |  localhost                  : ok=3    changed=0    unreachable=0    failed=0   
+2017-06-15 08:58:32,214 p=4734 u=centos |  temp1                      : ok=80   changed=11   unreachable=0    failed=0   
+2017-06-15 08:58:32,214 p=4734 u=centos |  Thursday 15 June 2017  08:58:32 +0000 (0:00:00.467)       0:01:40.292 ********* 
+2017-06-15 08:58:32,214 p=4734 u=centos |  =============================================================================== 
+2017-06-15 08:58:32,216 p=4734 u=centos |  docker : ensure docker packages are installed -------------------------- 43.69s
+2017-06-15 08:58:32,216 p=4734 u=centos |  kubernetes/preinstall : Update package management cache (YUM) ---------- 12.51s
+2017-06-15 08:58:32,216 p=4734 u=centos |  docker : Docker | pause while Docker restarts -------------------------- 10.07s
+2017-06-15 08:58:32,216 p=4734 u=centos |  kubernetes/preinstall : Install packages requirements ------------------- 7.95s
+2017-06-15 08:58:32,216 p=4734 u=centos |  docker : Docker | reload docker ----------------------------------------- 2.00s
+2017-06-15 08:58:32,217 p=4734 u=centos |  bootstrap-os : Remove require tty --------------------------------------- 1.12s
+2017-06-15 08:58:32,217 p=4734 u=centos |  bastion-ssh-config : create ssh bastion conf ---------------------------- 1.11s
+2017-06-15 08:58:32,217 p=4734 u=centos |  bootstrap-os : Gather nodes hostnames ----------------------------------- 1.06s
+2017-06-15 08:58:32,217 p=4734 u=centos |  docker : Configure docker repository on RedHat/CentOS ------------------- 1.04s
+2017-06-15 08:58:32,218 p=4734 u=centos |  kubernetes/preinstall : Install epel-release on RedHat/CentOS ----------- 0.87s
+2017-06-15 08:58:32,218 p=4734 u=centos |  docker : Write docker dns systemd drop-in ------------------------------- 0.81s
+2017-06-15 08:58:32,218 p=4734 u=centos |  docker : Write docker.service systemd file ------------------------------ 0.80s
+2017-06-15 08:58:32,218 p=4734 u=centos |  docker : Write docker options systemd drop-in --------------------------- 0.79s
+2017-06-15 08:58:32,218 p=4734 u=centos |  kubernetes/preinstall : Hosts | populate inventory into hosts file ------ 0.71s
+2017-06-15 08:58:32,219 p=4734 u=centos |  adduser : User | Create User -------------------------------------------- 0.69s
+2017-06-15 08:58:32,219 p=4734 u=centos |  kubernetes/preinstall : Enable ip forwarding ---------------------------- 0.57s
+2017-06-15 08:58:32,219 p=4734 u=centos |  kubernetes/preinstall : check resolvconf -------------------------------- 0.53s
+2017-06-15 08:58:32,219 p=4734 u=centos |  adduser : User | Create User Group -------------------------------------- 0.52s
+2017-06-15 08:58:32,220 p=4734 u=centos |  bootstrap-os : check if atomic host ------------------------------------- 0.48s
+2017-06-15 08:58:32,220 p=4734 u=centos |  docker : ensure docker service is started and enabled ------------------- 0.47s

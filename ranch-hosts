@@ -1,12 +1,12 @@
 # ## Configure 'ip' variable to bind kubernetes services on a
 # ## different ip than the default iface
 
-node1 ansible_ssh_host=10.88.58.146  # ip=10.3.0.1
-node2 ansible_ssh_host=10.88.58.148  # ip=10.3.0.2
-node3 ansible_ssh_host=10.88.58.147 # ip=10.3.0.3
-node4 ansible_ssh_host=10.88.58.149  # ip=10.3.0.4
+node1 ansible_ssh_host=10.184.53.127
+node2 ansible_ssh_host=10.184.53.128
+node3 ansible_ssh_host=10.184.53.126
+node4 ansible_ssh_host=10.184.53.129  # ip=10.3.0.4
 #node5 ansible_ssh_host=10.88.58.13 # ip=10.3.0.5
-temp1 ansible_ssh_host=10.184.53.140
+
 
 
 # node1 ansible_ssh_host=95.54.0.12  # ip=10.3.0.1
@@ -33,6 +33,7 @@ node2
 node3
 node4
 #node5
+# node6
 
 [k8s-cluster:children]
 kube-node
@@ -43,6 +44,3 @@ node2
 node3
 node4
 #node5
-
-[temp]
-temp1
